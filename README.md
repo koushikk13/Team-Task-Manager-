@@ -1,149 +1,188 @@
-<<<<<<< HEAD
-# TeamFlow - Team Task Manager
+# TeamFlow – Team Task Manager
 
-A full-stack team task manager with authentication, project management, task assignment, progress tracking, dashboard analytics, and Admin/Member role-based access.
+A full-stack team collaboration and task management platform built using React, Node.js, Express, and PostgreSQL. The application enables teams to manage projects, assign tasks, track progress, and collaborate efficiently with secure authentication and role-based access control.
 
-## Live Submission
-
-- Live URL: add your Railway URL after deployment
-- GitHub repo: add your repository URL after pushing
-- Demo video: record a 2-5 minute walkthrough after deployment
-
-## Demo Login
-
-Local development seeds demo data automatically.
-
-| Role | Email | Password |
-| --- | --- | --- |
-| Admin | `admin@example.com` | `password123` |
-| Member | `member@example.com` | `password123` |
+---
 
 ## Features
 
-- Signup and login with JWT authentication
-- First registered user becomes Admin
-- Admin signup after that requires `ADMIN_SIGNUP_CODE`
-- Admin can create/update/delete projects
-- Admin can add/remove project team members
-- Admin can create, assign, update, and delete tasks
-- Members can view their assigned projects/tasks
-- Members can update status for their own tasks
-- Dashboard shows project count, task status, completion rate, and overdue work
-- REST API with validation, relationships, and role checks
-- Railway-ready production setup with PostgreSQL
-- Local development fallback database in `.data/dev-db.json`
+- JWT Authentication & Authorization
+- Admin and Member Role Management
+- Project Creation & Team Collaboration
+- Task Assignment & Progress Tracking
+- Dashboard Analytics & KPIs
+- Overdue Task Monitoring
+- Secure REST APIs
+- Responsive Modern UI
+- Railway Deployment Ready
+
+---
 
 ## Tech Stack
 
-- Frontend: React, Vite, Lucide icons, CSS
-- Backend: Node.js, Express
-- Auth: JWT, bcryptjs
-- Validation: Zod
-- Production database: PostgreSQL through Railway `DATABASE_URL`
-- Local database: JSON fallback for instant demos
+### Frontend
+- React.js
+- Vite
+- CSS
+- Lucide React Icons
 
-## Run Locally
+### Backend
+- Node.js
+- Express.js
 
-1. Install dependencies:
+### Database
+- PostgreSQL
+- Railway Database
+
+### Authentication & Validation
+- JWT Authentication
+- bcryptjs
+- Zod Validation
+
+---
+
+## Project Modules
+
+### Authentication
+- User Signup/Login
+- JWT-based Session Management
+- Protected Routes
+- Role-based Access
+
+### Project Management
+- Create, Update, Delete Projects
+- Add/Remove Team Members
+- Project Progress Tracking
+
+### Task Management
+- Assign Tasks to Team Members
+- Update Task Status
+- Track Pending and Completed Tasks
+- Overdue Task Identification
+
+### Dashboard Analytics
+- Total Projects
+- Task Completion Metrics
+- Productivity Insights
+- Status-based Task Analysis
+
+---
+
+## Demo Credentials
+
+### Admin Access
+Email: `admin@example.com`  
+Password: `password123`
+
+### Member Access
+Email: `member@example.com`  
+Password: `password123`
+
+---
+
+## Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/koushikk13/Team-Task-Manager-.git
+```
+
+### Navigate to Project
+
+```bash
+cd Team-Task-Manager-
+```
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-2. Create `.env` from the example:
+### Configure Environment Variables
 
-```bash
-cp .env.example .env
+Create a `.env` file:
+
+```env
+JWT_SECRET=your_secret_key
+ADMIN_SIGNUP_CODE=make-me-admin
+DATABASE_URL=your_database_url
 ```
 
-On Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-3. Start the app:
+### Run Development Server
 
 ```bash
 npm run dev
 ```
 
-4. Open:
-
+Frontend:
 ```text
 http://localhost:5173
 ```
 
-The Express API runs on `http://localhost:5000` during development.
+Backend API:
+```text
+http://localhost:5000
+```
+
+---
 
 ## Railway Deployment
 
-1. Push this project to GitHub.
-2. Create a new Railway project from the GitHub repo.
-3. Add a PostgreSQL database in Railway.
-4. Add these environment variables to the web service:
+1. Push project to GitHub
+2. Create Railway Project
+3. Connect GitHub Repository
+4. Add PostgreSQL Database
+5. Configure Environment Variables
+6. Deploy Application
 
-```env
-JWT_SECRET=replace-with-a-long-random-secret
-ADMIN_SIGNUP_CODE=make-me-admin
-SEED_DEMO=true
-DATABASE_URL=${{Postgres.DATABASE_URL}}
-```
+---
 
-5. Deploy. Railway will run:
+## API Endpoints
 
-```bash
-npm install && npm run build
-npm start
-```
-
-6. Visit `/api/health` on the Railway domain to confirm the API is live.
-
-## REST API
-
-### Auth
-
-- `POST /api/auth/signup`
-- `POST /api/auth/login`
-- `GET /api/auth/me`
-
-### Dashboard
-
-- `GET /api/dashboard`
+### Authentication
+- POST `/api/auth/signup`
+- POST `/api/auth/login`
+- GET `/api/auth/me`
 
 ### Projects
-
-- `GET /api/projects`
-- `POST /api/projects` Admin
-- `GET /api/projects/:id`
-- `PATCH /api/projects/:id` Admin
-- `DELETE /api/projects/:id` Admin
-- `GET /api/projects/:id/members`
-- `POST /api/projects/:id/members` Admin
-- `DELETE /api/projects/:id/members/:userId` Admin
-- `GET /api/projects/:id/tasks`
-- `POST /api/projects/:id/tasks` Admin
+- GET `/api/projects`
+- POST `/api/projects`
+- PATCH `/api/projects/:id`
+- DELETE `/api/projects/:id`
 
 ### Tasks
+- GET `/api/tasks`
+- POST `/api/tasks`
+- PATCH `/api/tasks/:id`
+- DELETE `/api/tasks/:id`
 
-- `GET /api/tasks`
-- `GET /api/tasks/:id`
-- `PATCH /api/tasks/:id`
-- `DELETE /api/tasks/:id` Admin
+### Dashboard
+- GET `/api/dashboard`
 
-### Users
+---
 
-- `GET /api/users` Admin
+## Future Improvements
 
-## Demo Video Checklist
+- Real-time Notifications
+- Team Chat Integration
+- File Upload Support
+- Email Notifications
+- Activity Logs
+- Dark Mode UI
 
-1. Login as Admin.
-2. Show dashboard metrics, overdue tasks, and project progress.
-3. Create a project.
-4. Add a team member.
-5. Create and assign a task.
-6. Login as Member and update assigned task status.
-7. Refresh dashboard to show progress changes.
-=======
-# Team-Task-Manager-
->>>>>>> 08317b8b6ddbbfd62612063725781db6500de276
+---
+
+## Author
+
+Koushik Reddy
+
+- GitHub: https://github.com/koushikk13
+- LinkedIn: Add your LinkedIn URL
+
+---
+
+## License
+
+This project is developed for learning, portfolio, and internship demonstration purposes.
