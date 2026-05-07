@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TeamFlow - Team Task Manager
 
 A full-stack team task manager with authentication, project management, task assignment, progress tracking, dashboard analytics, and Admin/Member role-based access.
@@ -143,3 +144,6 @@ npm start
 5. Create and assign a task.
 6. Login as Member and update assigned task status.
 7. Refresh dashboard to show progress changes.
+=======
+# Team-Task-Manager-
+>>>>>>> 08317b8b6ddbbfd62612063725781db6500de276
