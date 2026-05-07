@@ -4,79 +4,102 @@ A full-stack team collaboration and task management platform built using React, 
 
 ---
 
+## Live Application
+
+Live URL:
+https://team-task-manager-production-a328.up.railway.app
+
+GitHub Repository:
+https://github.com/koushikk13/Team-Task-Manager-
+
+---
+
 ## Features
 
-- JWT Authentication & Authorization
-- Admin and Member Role Management
-- Project Creation & Team Collaboration
-- Task Assignment & Progress Tracking
-- Dashboard Analytics & KPIs
-- Overdue Task Monitoring
-- Secure REST APIs
-- Responsive Modern UI
-- Railway Deployment Ready
+* User Signup & Login Authentication
+* JWT-based Secure Authentication
+* Admin & Member Role-Based Access
+* Project Creation & Management
+* Team Member Management
+* Task Creation & Assignment
+* Task Status Tracking
+* Dashboard Analytics
+* Overdue Task Monitoring
+* REST API Architecture
+* Railway Deployment with PostgreSQL
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-- React.js
-- Vite
-- CSS
-- Lucide React Icons
+
+* React.js
+* Vite
+* CSS
+* Lucide React Icons
 
 ### Backend
-- Node.js
-- Express.js
+
+* Node.js
+* Express.js
 
 ### Database
-- PostgreSQL
-- Railway Database
+
+* PostgreSQL
+* Railway Database
 
 ### Authentication & Validation
-- JWT Authentication
-- bcryptjs
-- Zod Validation
 
----
-
-## Project Modules
-
-### Authentication
-- User Signup/Login
-- JWT-based Session Management
-- Protected Routes
-- Role-based Access
-
-### Project Management
-- Create, Update, Delete Projects
-- Add/Remove Team Members
-- Project Progress Tracking
-
-### Task Management
-- Assign Tasks to Team Members
-- Update Task Status
-- Track Pending and Completed Tasks
-- Overdue Task Identification
-
-### Dashboard Analytics
-- Total Projects
-- Task Completion Metrics
-- Productivity Insights
-- Status-based Task Analysis
+* JWT Authentication
+* bcryptjs
+* Zod Validation
 
 ---
 
 ## Demo Credentials
 
 ### Admin Access
-Email: `admin@example.com`  
-Password: `password123`
+
+Email: [admin@example.com](mailto:admin@example.com)
+Password: password123
 
 ### Member Access
-Email: `member@example.com`  
-Password: `password123`
+
+Email: [member@example.com](mailto:member@example.com)
+Password: password123
+
+---
+
+## Project Modules
+
+### Authentication
+
+* User Signup/Login
+* Protected Routes
+* JWT Authentication
+* Role Authorization
+
+### Project Management
+
+* Create, Update, Delete Projects
+* Add & Remove Team Members
+* Project Progress Tracking
+
+### Task Management
+
+* Create Tasks
+* Assign Tasks
+* Update Task Status
+* Delete Tasks
+* Overdue Detection
+
+### Dashboard
+
+* Project Statistics
+* Task Status Overview
+* Completion Metrics
+* Productivity Insights
 
 ---
 
@@ -102,12 +125,13 @@ npm install
 
 ### Configure Environment Variables
 
-Create a `.env` file:
+Create a `.env` file and add:
 
 ```env
 JWT_SECRET=your_secret_key
 ADMIN_SIGNUP_CODE=make-me-admin
 DATABASE_URL=your_database_url
+SEED_DEMO=true
 ```
 
 ### Run Development Server
@@ -117,14 +141,10 @@ npm run dev
 ```
 
 Frontend:
-```text
 http://localhost:5173
-```
 
-Backend API:
-```text
+Backend:
 http://localhost:5000
-```
 
 ---
 
@@ -142,35 +162,39 @@ http://localhost:5000
 ## API Endpoints
 
 ### Authentication
-- POST `/api/auth/signup`
-- POST `/api/auth/login`
-- GET `/api/auth/me`
+
+* POST /api/auth/signup
+* POST /api/auth/login
+* GET /api/auth/me
 
 ### Projects
-- GET `/api/projects`
-- POST `/api/projects`
-- PATCH `/api/projects/:id`
-- DELETE `/api/projects/:id`
+
+* GET /api/projects
+* POST /api/projects
+* PATCH /api/projects/:id
+* DELETE /api/projects/:id
 
 ### Tasks
-- GET `/api/tasks`
-- POST `/api/tasks`
-- PATCH `/api/tasks/:id`
-- DELETE `/api/tasks/:id`
+
+* GET /api/tasks
+* POST /api/tasks
+* PATCH /api/tasks/:id
+* DELETE /api/tasks/:id
 
 ### Dashboard
-- GET `/api/dashboard`
+
+* GET /api/dashboard
 
 ---
 
 ## Future Improvements
 
-- Real-time Notifications
-- Team Chat Integration
-- File Upload Support
-- Email Notifications
-- Activity Logs
-- Dark Mode UI
+* Real-time Notifications
+* Team Chat System
+* File Upload Support
+* Email Notifications
+* Activity Logs
+* Dark Mode
 
 ---
 
@@ -178,11 +202,11 @@ http://localhost:5000
 
 Koushik Reddy
 
-- GitHub: https://github.com/koushikk13
-- LinkedIn: Add your LinkedIn URL
+GitHub:
+https://github.com/koushikk13
 
 ---
 
 ## License
 
-This project is developed for learning, portfolio, and internship demonstration purposes.
+This project is developed for educational, portfolio, and internship assessment purposes.
